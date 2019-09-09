@@ -1,0 +1,132 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Quicksand',sans-serif;
+
+}
+  body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: #000000;
+      }
+      .title{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        padding-top: 20px;
+        color: #fff;
+        font-size: 48px;
+        font-family: 'Permanent Marker',cursive;
+        text-shadow: 3px 3px 1px rgba(0,0, 0, 1)
+      }
+
+      .circle-wrapper {
+        position: relative;
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr;
+        border-radius: 50%;
+        transition: 1s cubic-bezier(.42, .97, .52, 1.49);
+        
+      }
+      
+      .circle{
+        
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+      }
+      .blue{
+        background-color: #2196F3;
+        border-top-left-radius: 100%;
+      }
+      .blue.iluminate{
+        background-color: #64b5f6
+      }
+      .purple{
+        background-color: #9c2780;
+        border-top-right-radius: 100%;
+      }
+      .purple.iluminate{
+        background-color: #ba68c8;
+      }
+      .orange{
+        background-color: #ff9800;
+        border-bottom-left-radius: 100%;
+      }
+      .orange.iluminate{
+        background-color: #ffb74d;
+      }
+      .green{
+        background-color: #4caf50;
+        border-bottom-right-radius: 100%;
+      }
+      .green.iluminate{
+        background-color: #81c784;
+      }
+
+      .btn{
+        border: none;
+        outline: none;
+        background-color: transparent;
+        cursor: pointer;
+      }
+      .btn-start{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(.95);
+        width: 300px;
+        height: 50px;
+        padding: 12px;
+        background-color: #fff;
+        box-shadow: 1px 1px 5px rgba(255, 255, 255, .8);
+        border-radius: 32px;
+        font-family: sans-serif;
+        transition: .3s;
+      }
+      .btn-start:active{
+        transform: translate(-50%, -50%) scale(1);
+      }
+      .hide{
+        display: none;
+      }
+      .congrats{
+        visibility: hidden;
+        opacity: 0;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        transition: opacity 2s;
+        z-index: -1;  
+      }
+
+      .scoreBox{
+        display: none;
+        position: absolute;
+        top: 32px;
+        right: 32px;
+        color: #fff;
+        text-align: center;
+      }
+
+      .score{
+        display: block;
+        padding-top: 4px;
+  
+      }
+
+      .starts{
+        display: none;
+        position: absolute;
+        bottom: 32px;
+        left: 50%;
+        transform: translate(-50%);
+        color: #fff;
+      }
+      .fa-star{
+        font-size: 32px;
+      }
